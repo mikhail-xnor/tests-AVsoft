@@ -12,18 +12,18 @@ void CompanyView::ShowCompany() const
 bool CompanyView::ShowOptions() const
 {
 	auto select{ 0 };
-	std::cout << "\n___Список команд___"
-		<< "\nДобавить сотрудника:_________1"
-		<< "\nИзменить сотрудника:_________2"
-		<< "\nУдалить сотрудника:__________3"
-		<< "\nДобавить подразделение:______4"
-		<< "\nПереименовать подразделение:_5"
-		<< "\nУдалить подразделение:_______6"
-		<< "\nЗагрузить список из файла:___7"
-		<< "\nСохранить изменения:_________8"
-		<< "\nОтменить изменение:__________9"
-		<< "\nВернуть изменение:__________10"
-		<< "\nЗавершить работу:___________11\n";
+	std::cout << "\n___РЎРїРёСЃРѕРє РєРѕРјР°РЅРґ___"
+		<< "\nР”РѕР±Р°РІРёС‚СЊ СЃРѕС‚СЂСѓРґРЅРёРєР°:_________1"
+		<< "\nРР·РјРµРЅРёС‚СЊ СЃРѕС‚СЂСѓРґРЅРёРєР°:_________2"
+		<< "\nРЈРґР°Р»РёС‚СЊ СЃРѕС‚СЂСѓРґРЅРёРєР°:__________3"
+		<< "\nР”РѕР±Р°РІРёС‚СЊ РїРѕРґСЂР°Р·РґРµР»РµРЅРёРµ:______4"
+		<< "\nРџРµСЂРµРёРјРµРЅРѕРІР°С‚СЊ РїРѕРґСЂР°Р·РґРµР»РµРЅРёРµ:_5"
+		<< "\nРЈРґР°Р»РёС‚СЊ РїРѕРґСЂР°Р·РґРµР»РµРЅРёРµ:_______6"
+		<< "\nР—Р°РіСЂСѓР·РёС‚СЊ СЃРїРёСЃРѕРє РёР· С„Р°Р№Р»Р°:___7"
+		<< "\nРЎРѕС…СЂР°РЅРёС‚СЊ РёР·РјРµРЅРµРЅРёСЏ:_________8"
+		<< "\nРћС‚РјРµРЅРёС‚СЊ РёР·РјРµРЅРµРЅРёРµ:__________9"
+		<< "\nР’РµСЂРЅСѓС‚СЊ РёР·РјРµРЅРµРЅРёРµ:__________10"
+		<< "\nР—Р°РІРµСЂС€РёС‚СЊ СЂР°Р±РѕС‚Сѓ:___________11\n";
 	(std::cin >> select).get();
 	switch (select)
 	{
@@ -70,32 +70,32 @@ void CompanyView::ShowErrorMessage(std::string&& message) const
 
 void CompanyView::ShowErrorMessageDepartmentSameName() const
 {
-	ShowErrorMessage("\nПодразделение с таким наименованием уже существует!");
+	ShowErrorMessage("\nРџРѕРґСЂР°Р·РґРµР»РµРЅРёРµ СЃ С‚Р°РєРёРј РЅР°РёРјРµРЅРѕРІР°РЅРёРµРј СѓР¶Рµ СЃСѓС‰РµСЃС‚РІСѓРµС‚!");
 }
 
 void CompanyView::ShowErrorMessageDepartmentFallName() const
 {
-	ShowErrorMessage("\nПодразделение с таким наименованием не существует!");
+	ShowErrorMessage("\nРџРѕРґСЂР°Р·РґРµР»РµРЅРёРµ СЃ С‚Р°РєРёРј РЅР°РёРјРµРЅРѕРІР°РЅРёРµРј РЅРµ СЃСѓС‰РµСЃС‚РІСѓРµС‚!");
 }
 
 void CompanyView::ShowErrorMessageEmploymentSameName() const
 {
-	ShowErrorMessage("\nТакой сотрудник уже присутствует в данном подразделении!");
+	ShowErrorMessage("\nРўР°РєРѕР№ СЃРѕС‚СЂСѓРґРЅРёРє СѓР¶Рµ РїСЂРёСЃСѓС‚СЃС‚РІСѓРµС‚ РІ РґР°РЅРЅРѕРј РїРѕРґСЂР°Р·РґРµР»РµРЅРёРё!");
 }
 
 void CompanyView::ShowErrorMessageEmploymentFallName() const
 {
-	ShowErrorMessage("\nТакой сотрудник отсутствует в данном подразделении!");
+	ShowErrorMessage("\nРўР°РєРѕР№ СЃРѕС‚СЂСѓРґРЅРёРє РѕС‚СЃСѓС‚СЃС‚РІСѓРµС‚ РІ РґР°РЅРЅРѕРј РїРѕРґСЂР°Р·РґРµР»РµРЅРёРё!");
 }
 
 void CompanyView::ShowErrorMessageWrongXmlPath() const
 {
-	ShowErrorMessage("\nУказано неверное расположение файла!\n");
+	ShowErrorMessage("\nРЈРєР°Р·Р°РЅРѕ РЅРµРІРµСЂРЅРѕРµ СЂР°СЃРїРѕР»РѕР¶РµРЅРёРµ С„Р°Р№Р»Р°!\n");
 }
 
 void CompanyView::ShowErrorMessageFallXmlPathToSave() const
 {
-	ShowErrorMessage("\nНе указан файл для сохранения! \n");
+	ShowErrorMessage("\nРќРµ СѓРєР°Р·Р°РЅ С„Р°Р№Р» РґР»СЏ СЃРѕС…СЂР°РЅРµРЅРёСЏ! \n");
 }
 
 std::string CompanyView::GetData(std::string&& message) const
@@ -108,30 +108,30 @@ std::string CompanyView::GetData(std::string&& message) const
 
 std::string CompanyView::GetDepartmentName() const
 {
-	return GetData("\nВведите наименование подразделения: ");
+	return GetData("\nР’РІРµРґРёС‚Рµ РЅР°РёРјРµРЅРѕРІР°РЅРёРµ РїРѕРґСЂР°Р·РґРµР»РµРЅРёСЏ: ");
 }
 
 std::string CompanyView::GetFullNameEmployment() const
 {
-	return GetData("\nВведите инициалы сотрудника через пробел (Фамилия Имя Отчество): \n");
+	return GetData("\nР’РІРµРґРёС‚Рµ РёРЅРёС†РёР°Р»С‹ СЃРѕС‚СЂСѓРґРЅРёРєР° С‡РµСЂРµР· РїСЂРѕР±РµР» (Р¤Р°РјРёР»РёСЏ РРјСЏ РћС‚С‡РµСЃС‚РІРѕ): \n");
 }
 
 std::string CompanyView::GetFunctionEmployment() const
 {
-	return GetData("\nВведите должность сотрудника: ");
+	return GetData("\nР’РІРµРґРёС‚Рµ РґРѕР»Р¶РЅРѕСЃС‚СЊ СЃРѕС‚СЂСѓРґРЅРёРєР°: ");
 }
 
 std::string CompanyView::GetSalaryEmployment() const
 {
-	return GetData("\nВведите зарплату сотрудника: ");
+	return GetData("\nР’РІРµРґРёС‚Рµ Р·Р°СЂРїР»Р°С‚Сѓ СЃРѕС‚СЂСѓРґРЅРёРєР°: ");
 }
 
 std::string CompanyView::GetXmlPathToLoad() const
 {
-	return GetData("\nВведите расположение загрузочного файла (.xml): \n");
+	return GetData("\nР’РІРµРґРёС‚Рµ СЂР°СЃРїРѕР»РѕР¶РµРЅРёРµ Р·Р°РіСЂСѓР·РѕС‡РЅРѕРіРѕ С„Р°Р№Р»Р° (.xml): \n");
 }
 
 std::string CompanyView::GetXmlPathToSave() const
 {
-	return GetData("\nВведите расположение нового файла или пропустите ввод для сохранения в текущий документ (.xml): \n");
+	return GetData("\nР’РІРµРґРёС‚Рµ СЂР°СЃРїРѕР»РѕР¶РµРЅРёРµ РЅРѕРІРѕРіРѕ С„Р°Р№Р»Р° РёР»Рё РїСЂРѕРїСѓСЃС‚РёС‚Рµ РІРІРѕРґ РґР»СЏ СЃРѕС…СЂР°РЅРµРЅРёСЏ РІ С‚РµРєСѓС‰РёР№ РґРѕРєСѓРјРµРЅС‚ (.xml): \n");
 }
