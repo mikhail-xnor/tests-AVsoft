@@ -21,10 +21,16 @@
     <ClCompile Include="Employment.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Company.cpp">
+    <ClCompile Include="CompanyModel.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Department.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CompanyView.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CompanyController.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -35,7 +41,13 @@
     <ClInclude Include="Department.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Company.h">
+    <ClInclude Include="CompanyModel.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CompanyView.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CompanyController.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

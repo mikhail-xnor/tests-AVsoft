@@ -1,4 +1,4 @@
-#include "Company.h"
+#include "CompanyController.h"
 #include <iostream>
 #include <atlbase.h>
 int main()

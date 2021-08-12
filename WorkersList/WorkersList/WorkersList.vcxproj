@@ -139,13 +139,17 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Company.cpp" />
+    <ClCompile Include="CompanyModel.cpp" />
+    <ClCompile Include="CompanyController.cpp" />
+    <ClCompile Include="CompanyView.cpp" />
     <ClCompile Include="Department.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Employment.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Company.h" />
+    <ClInclude Include="CompanyModel.h" />
+    <ClInclude Include="CompanyController.h" />
+    <ClInclude Include="CompanyView.h" />
     <ClInclude Include="Department.h" />
     <ClInclude Include="Employment.h" />
   </ItemGroup>
